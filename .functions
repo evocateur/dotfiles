@@ -86,13 +86,13 @@ function dataurl() {
 }
 
 # Create a git.io short URL
-function gitio() {
-	if [ -z "${1}" -o -z "${2}" ]; then
-		echo "Usage: \`gitio slug url\`"
-		return 1
-	fi
-	curl -i http://git.io/ -F "url=${2}" -F "code=${1}"
-}
+# function gitio() {
+# 	if [ -z "${1}" -o -z "${2}" ]; then
+# 		echo "Usage: \`gitio slug url\`"
+# 		return 1
+# 	fi
+# 	curl -i http://git.io/ -F "url=${2}" -F "code=${1}"
+# }
 
 # Start an HTTP server from a directory, optionally specifying the port
 function server() {
@@ -105,12 +105,12 @@ function server() {
 
 # Start a PHP server from a directory, optionally specifying the port
 # (Requires PHP 5.4.0+.)
-function phpserver() {
-	local port="${1:-4000}"
-	local ip=$(ipconfig getifaddr en1)
-	sleep 1 && open "http://${ip}:${port}/" &
-	php -S "${ip}:${port}"
-}
+# function phpserver() {
+# 	local port="${1:-4000}"
+# 	local ip=$(ipconfig getifaddr en1)
+# 	sleep 1 && open "http://${ip}:${port}/" &
+# 	php -S "${ip}:${port}"
+# }
 
 # Compare original and gzipped file size
 function gz() {
@@ -247,7 +247,7 @@ function unquarantine() {
 
 # Install Grunt plugins and add them as `devDependencies` to `package.json`
 # Usage: `gi contrib-watch contrib-uglify zopfli`
-function gi() {
-	local IFS=,
-	eval npm install --save-dev grunt-{"$*"}
-}
+# function gi() {
+# 	local IFS=,
+# 	eval npm install --save-dev grunt-{"$*"}
+# }
