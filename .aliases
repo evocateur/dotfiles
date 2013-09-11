@@ -7,10 +7,10 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Documents/Dropbox"
+alias d="cd ~/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/Projects"
+# alias p="cd ~/Projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
@@ -98,7 +98,7 @@ command -v md5sum > /dev/null || alias md5sum="md5"
 command -v sha1sum > /dev/null || alias sha1sum="shasum"
 
 # Trim new lines and copy to clipboard
-alias c="tr -d '\n' | pbcopy"
+# alias c="tr -d '\n' | pbcopy"
 
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
