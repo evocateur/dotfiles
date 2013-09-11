@@ -1,6 +1,10 @@
 # Load brew bash-completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    # bash 3.x
     . $(brew --prefix)/etc/bash_completion
+elif [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
+    # bash 4.x
+    . $(brew --prefix)/share/bash-completion/bash_completion
 fi
 
 # Load NVM
