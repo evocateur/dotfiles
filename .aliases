@@ -43,6 +43,21 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# Git Shortcuts
+alias gap="git add -p"
+alias gb="git branch"
+alias gba="git branch -a"
+# alias gc="git commit -v"
+alias gca="git commit -v -a"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gs="git status"
+alias go="git checkout"
+alias gob="git checkout -b"
+alias gpl="git log --name-only --pretty=format:'%Cred%h%Creset %an%n%Cgreen%s%Creset'"
+alias gpr="git p4 rebase"
+alias gps="git p4 submit"
+
 # Gzip-enabled `curl`
 alias gurl='curl --compressed'
 
