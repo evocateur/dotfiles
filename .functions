@@ -1,3 +1,10 @@
+# functionName () { do something $@<-arguments ; }
+function ls { command ls -1AGp "$@"; }
+       # 'command ls' to prevent loop; -A for .file, -F for dir/ link@,
+       # -h for 5k 3m 1g, -o for printing flags (uchg)...
+function l  { ls -lhog "$@"; } # -l to list in long format...
+function ll { ls -lF "$@" | less -XF ; } # pipe into 'less'
+
 # Simple calculator
 function calc() {
 	local result=""
