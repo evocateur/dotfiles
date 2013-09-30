@@ -3,8 +3,8 @@ if [ -n "$SSH_CLIENT" ]; then
     eval "$(launchctl export)"
 fi
 
-[ -r "$HOME/.paths"   ] && source "$HOME/.paths"
-[ -r "$HOME/.exports" ] && source "$HOME/.exports"
+[ -f "$HOME/.paths"   ] && source "$HOME/.paths"
+[ -f "$HOME/.exports" ] && source "$HOME/.exports"
 
 # export ZPROMPT_ENABLED="false"
 
