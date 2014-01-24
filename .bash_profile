@@ -6,8 +6,6 @@ fi
 [ -f "$HOME/.paths"   ] && source "$HOME/.paths"
 [ -f "$HOME/.exports" ] && source "$HOME/.exports"
 
-# export ZPROMPT_ENABLED="false"
-
 #SPRINTER_OVERRIDES
 # Share functions, aliases, completion, and prompts with login shells
 case "$-" in *i*) if [ -r ~/.bashrc ]; then . ~/.bashrc; fi;; esac
