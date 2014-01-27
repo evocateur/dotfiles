@@ -7,13 +7,13 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias d="cd ~/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
+# alias d="cd ~/Dropbox"
+# alias dl="cd ~/Downloads"
+# alias dt="cd ~/Desktop"
 # alias p="cd ~/Projects"
-alias g="git"
-alias h="history"
-alias j="jobs"
+# alias g="git"
+# alias h="history"
+# alias j="jobs"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
