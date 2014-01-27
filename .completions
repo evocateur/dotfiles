@@ -1,10 +1,12 @@
-# Load brew bash-completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    # bash 3.x
-    . $(brew --prefix)/etc/bash_completion
-elif [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
-    # bash 4.x
-    . $(brew --prefix)/share/bash-completion/bash_completion
+# Load brew bash-completion (only if zillow-bootstrap missing)
+if [ ! -r /Users/daniels/.sprinter/zillow/.rc ]; then
+    if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
+        # bash 4.x
+        . $(brew --prefix)/share/bash-completion/bash_completion
+    elif [ -f $(brew --prefix)/etc/bash_completion ]; then
+        # bash 3.x
+        . $(brew --prefix)/etc/bash_completion
+    fi
 fi
 
 # Load NVM
