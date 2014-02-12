@@ -9,11 +9,8 @@ if [ ! -r /Users/daniels/.sprinter/zillow/.rc ]; then
     fi
 fi
 
-# Load NVM
-if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
-    . "$HOME/.nvm/nvm.sh"
-    . "$HOME/.nvm/bash_completion"
-fi
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh # This loads NVM
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh
