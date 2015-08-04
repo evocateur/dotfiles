@@ -1,7 +1,7 @@
 [ -z "$PS1" ] && return
 
 #SPRINTER_OVERRIDES
-alias ZEDITOR='subl -nw'
+alias ZEDITOR='atom -nw'
 unalias zbuild
 export P4CONFIG=".p4config"
 
